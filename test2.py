@@ -71,7 +71,7 @@ def check_player_image_exists(player_name):
 @st.cache_data
 def load_adp_data():
     try:
-        data = pd.read_csv('data.csv')
+        data = pd.read_csv('data2.csv')
         data.rename(columns={'Sleeper.1': 'ESPN'}, inplace=True)
         data[['Underdog', 'Sleeper', 'ESPN']] = data[['Underdog', 'Sleeper', 'ESPN']].apply(pd.to_numeric, errors='coerce')
         return data
